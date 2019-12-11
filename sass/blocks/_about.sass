@@ -1,0 +1,59 @@
+.about
+  &-composition
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    div
+      flex-basis: 48%
+    &__text
+      margin-bottom: 40px
+      p
+        margin-top: 0
+.accordion
+  &__item
+    margin-bottom: 10px
+    &--active
+      .accordion__text
+        display: block
+  &__btn
+    border: 1px solid #e7e7e7
+    display: flex
+    align-items: center
+    width: 100%
+    min-height: 45px
+    padding: 0
+    background-color: #f7f7f7
+    outline: none
+    i
+      width: 60px
+    span
+      display: block
+      line-height: 45px
+      padding-left: 30px
+      border-left: 1px solid #e7e7e7
+      font-size: 20px
+      +RalewayMedium
+    &--active
+      border-bottom: none
+      i, span
+        color: $accent
+  &__text
+    border: 1px solid #e7e7e7
+    padding: 0 15px
+    display: none
+    p
+      font-size: 14px
+      margin: 10px 0
+      max-height: 90px
+      overflow: hidden
+      overflow-y: scroll
+
+@media (max-width: 992px)
+  .about
+    &-composition
+      div
+        flex-basis: 100%
+      &__right
+        order: -1
+        text-align: center
+        margin-bottom: 30px

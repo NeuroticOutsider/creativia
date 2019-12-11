@@ -56,6 +56,7 @@ header, footer, section
 .section
 	padding: 100px 0
 	color: $primary
+	background-color: #fff
 	&__title
 		font-size: 30px
 		color: $accent
@@ -64,7 +65,7 @@ header, footer, section
 		margin: auto
 		margin-top: 0
 		text-align: center
-		margin-bottom: 25px
+		margin-bottom: 40px
 		span
 			color: #ffffff
 	&__subtitle
@@ -76,6 +77,29 @@ header, footer, section
 		margin-bottom: 100px
 		text-align: center
 		max-width: 950px
+		b
+			color: $accent
+	&--white
+		.section__title
+			span
+				color: #000000
+	&:after
+		content: ''
+		position: absolute
+		left: 33%
+		bottom: 0
+		width: 34%
+		height: 1px
+		background-color: $secondary
+	&:before
+		content: ''
+		position: absolute
+		bottom: -9px
+		left: calc(50% - 10px)
+		width: 20px
+		height: 18px
+		clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)
+		background-color: $secondary
 
 .btn
 	display: inline-block
@@ -99,3 +123,19 @@ header, footer, section
 		background-color: $accent
 	&:last-child
 		margin-right: 0
+
+@media (max-width: 992px)
+	.section
+		padding: 80px 0
+		&__title
+			margin-bottom: 30px
+		&__subtitle
+			margin-bottom: 60px
+
+@media (max-width: 575px)
+	.section
+		padding: 50px 0
+		&__title
+			margin-bottom: 30px
+		&__subtitle
+			margin-bottom: 40px

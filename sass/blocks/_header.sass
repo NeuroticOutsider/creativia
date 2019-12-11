@@ -138,20 +138,21 @@
   .hamburger-btn
     display: block
     cursor: pointer
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+    clip-path: polygon(20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%, 0 50%)
     transition: all 3s
     background-color: $accent
     position: relative
+    height: 45px
     .hamburger
       padding: 5px
       outline: none
-      width: 50px
-      height: 55px
+      width: 55px
+      height: 45px
       position: relative
       z-index: 200
       &-box
         width: 35px
-        height: 45px
+        height: 35px
       &-inner, &-inner:after, &-inner:before
         width: 35px
         background-color: #fff
