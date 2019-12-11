@@ -3459,7 +3459,8 @@ header, footer, section {
     bottom: 0;
     width: 34%;
     height: 1px;
-    background-color: #262626; }
+    background-color: #262626;
+    z-index: 5; }
   .section:before {
     content: '';
     position: absolute;
@@ -3469,7 +3470,8 @@ header, footer, section {
     height: 18px;
     -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
     clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-    background-color: #262626; }
+    background-color: #262626;
+    z-index: 5; }
 
 .btn {
   display: inline-block;
@@ -3847,3 +3849,87 @@ header, footer, section {
     order: -1;
     text-align: center;
     margin-bottom: 30px; } }
+
+.features:after, .features:before {
+  display: none; }
+
+.features__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #262626;
+  text-align: center; }
+
+.features__item {
+  -ms-flex-preferred-size: 23%;
+  flex-basis: 23%;
+  max-width: 300px; }
+  .features__item:hover .features__image svg {
+    fill: #ff0036;
+    stroke: #ff0036; }
+  .features__item:hover .features__image i {
+    color: #ffffff; }
+
+.features__image {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: auto; }
+  .features__image svg {
+    width: 90px;
+    height: 90px;
+    fill: #ffffff;
+    stroke: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+  .features__image i {
+    position: relative;
+    z-index: 2;
+    color: #262626;
+    font-size: 26px;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+
+.features__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'RalewayMedium', sans-serif;
+  font-weight: 500;
+  margin: 20px 0px; }
+
+.features__text p {
+  margin-top: 0; }
+
+@media (max-width: 992px) {
+  .features {
+    padding-bottom: 30px; }
+    .features__item {
+      -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+      margin-bottom: 30px; } }
+
+@media (max-width: 380px) {
+  .features__wrap {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .features__item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; } }

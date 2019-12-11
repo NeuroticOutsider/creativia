@@ -1,0 +1,65 @@
+.features
+  &:after, &:before
+    display: none
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    color: $secondary
+    text-align: center
+  &__item
+    flex-basis: 23%
+    max-width: 300px
+    &:hover
+      .features
+        &__image
+          svg
+            fill: $accent
+            stroke: $accent
+          i
+            color: #ffffff
+  &__image
+    position: relative
+    width: 90px
+    height: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: auto
+    svg
+      width: 90px
+      height: 90px
+      fill: #ffffff
+      stroke: #000000
+      position: absolute
+      top: 0
+      left: 0
+      transition: all .3s
+    i
+      position: relative
+      z-index: 2
+      color: $secondary
+      font-size: 26px
+      transition: all .3s
+  &__title
+    text-transform: uppercase
+    font-size: 20px
+    +RalewayMedium
+    margin: 20px 0px
+  &__text
+    p
+      margin-top: 0
+
+@media (max-width: 992px)
+  .features
+    padding-bottom: 30px
+    &__item
+      flex-basis: 47%
+      margin-bottom: 30px
+
+@media (max-width: 380px)
+  .features
+    &__wrap
+      justify-content: center
+    &__item
+      flex-basis: 100%
