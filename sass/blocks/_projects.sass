@@ -1,0 +1,102 @@
+.projects
+  background-color: $secondary
+  &:after, &:before
+    background-color: $accent
+  &__sort
+    margin-top: 30px
+    ul
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      li
+        display: block
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
+  &__list
+    &-filters
+      margin-bottom: 80px
+    &-btn
+      background-color: transparent
+      border: none
+      outline: none
+      text-transform: uppercase
+      margin-bottom: 20px
+      transition: all .3s
+      color: #a4a4a4
+      &:hover
+        color: #ffffff
+      &.active
+        color: $accent
+    &-item
+      cursor: pointer
+      &:hover
+        .projects__list-links
+          opacity: 1
+        .projects__list-image
+          img
+            opacity: .05
+      &:nth-child(odd)
+        flex-basis: 30%
+      &:nth-child(even)
+        flex-basis: 20%
+    &-image
+      line-height: 0
+      background-color: #171717
+      line-height: 0
+      position: relative
+      overflow: hidden
+      img
+        height: 350px
+        object-fit: cover
+        transition: all .3s
+        width: 100%
+    &-links
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 30
+      transition: all .3s
+      flex-direction: column
+      i
+        display: block
+        margin-bottom: 30px
+        color: #ffffff
+        font-size: 22px
+      span
+        color: #ffffff
+  &__projects-list
+    display: flex
+    flex-wrap: wrap
+
+@media (max-width: 992px)
+  .projects
+    &__list
+      &-item
+        &:nth-child(odd)
+          flex-basis: 50%
+        &:nth-child(even)
+          flex-basis: 50%
+
+@media (max-width: 575px)
+  .projects
+    &__list
+      &-image
+        img
+          height: 250px
+      &-filters
+        margin-bottom: 40px
+
+@media (max-width: 400px)
+  .projects
+    &__list
+      &-image
+        img
+          height: 150px

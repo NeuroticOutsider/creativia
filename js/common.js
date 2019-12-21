@@ -70,4 +70,21 @@ $(function() {
     $(this).next().slideToggle();
   });
 
+  	// Filter (section projects)
+
+	$('.projects__list-btn').click(function() {
+		$('.projects__list-btn').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	var $projectsItem = $('.projects__list-item').hide(),
+			viewLess = $('.projects__view-less').hide(),
+			$curr;
+
+  $('.projects__list-btn').click(function() {
+		$curr = $projectsItem.filter('.' + this.id).hide();
+    $curr.slice(0, 8).show();
+		$projectsItem.not($curr).hide();
+	}).filter('.active').click();
+
 });
