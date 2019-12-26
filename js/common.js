@@ -42,7 +42,7 @@ $(function() {
     $(this).next().slideToggle();
   });
 
-  	// Filter (section projects)
+  // Filter (section projects)
 
 	$('.projects__list-btn').click(function() {
 		$('.projects__list-btn').removeClass('active');
@@ -58,5 +58,12 @@ $(function() {
     $curr.slice(0, 8).show();
 		$projectsItem.not($curr).hide();
 	}).filter('.active').click();
+
+  // clients slider 
+
+  $('#clients-slider').slick({
+    dots: true,
+    arrows: false
+  });
 
 });
