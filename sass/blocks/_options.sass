@@ -1,0 +1,162 @@
+.options
+  &__wrap
+    .section__subtitle
+      margin-bottom: 40px
+  &__composition
+    display: flex
+    justify-content: space-between
+    position: relative
+    min-height: 615px
+  &__image-block
+    width: 470px
+    position: absolute
+    top: 0
+    left: calc(50% - 235px)
+    line-height: 0
+    .btn
+      position: absolute
+      bottom: 75px
+      left: calc(50% - 85px)
+      background-color: #393939
+      z-index: 20
+      &:hover
+        background-color: $accent
+  &__list
+    width: 370px
+    padding-top: 140px
+    ul
+      li
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        min-height: 55px
+        border: solid 1px #e7e7e7
+        background-color: #fff
+        padding-right: 20px
+        margin-bottom: 25px
+        transition: all .3s
+        text-align: right
+        &:last-child
+          margin-bottom: 0
+        span
+          +RalewayMedium
+          font-size: 20px
+          text-transform: uppercase
+          color: $secondary
+          display: inline-block
+          margin-right: 15px
+          transition: all .3s
+        div
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: center
+          svg
+            width: 35px
+            height: 35px
+            fill: #e7e7e7
+            transition: all .3s
+          i
+            position: absolute
+            color: $secondary
+            transition: all .3s
+            font-size: 13px
+        &:hover
+          background-color: $accent
+          border: 1px solid $accent
+          span
+            color: #ffffff
+          div
+            svg
+              fill: #ffffff
+            i
+              color: $accent
+    &-right
+      ul
+        li
+          justify-content: flex-start
+          padding-right: 0
+          padding-left: 20px
+          text-align: left
+          div
+            order: -1
+            margin-right: 15px
+          span
+            margin-right: 0
+
+@media (max-width: 1200px)
+  .options
+    &__image-block
+      width: 400px
+      left: calc(50% - 200px)
+    &__list
+      width: 300px
+      padding-top: 100px
+    &__composition
+      min-height: 500px
+
+@media (max-width: 992px)
+  .options
+    &__wrap
+      .section__subtitle
+        margin-bottom: 20px
+    &__image-block
+      width: 300px
+      left: calc(50% - 150px)
+      .btn
+        bottom: 50px
+    &__list
+      width: 210px
+      padding-top: 70px
+      ul
+        li
+          padding-right: 10px
+          span
+            font-size: 14px
+          div
+            svg
+              width: 30px
+              height: 30px
+      &-right
+        ul
+          li
+            padding-right: 0
+            padding-left: 10px
+    &__composition
+      min-height: 400px
+
+@media (max-width: 768px)
+  .options
+    &__image-block
+      display: none
+    &__composition
+      justify-content: center
+      min-height: inherit
+    &__list
+      padding-top: 10px
+      width: inherit
+      &-left
+        ul
+          margin-right: 20px
+      ul
+        li
+          padding: 10px
+
+@media (max-width: 575px)
+  .options
+    &__composition
+      justify-content: center
+      min-height: inherit
+      flex-direction: column
+    &__list
+      ul
+        margin: 0
+        margin-bottom: 15px
+        li
+          justify-content: center
+          padding: 10px
+          div
+            order: -1
+            margin-right: 15px
+          span
+            margin-right: 0
